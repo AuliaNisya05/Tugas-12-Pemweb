@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>image picker</title>
+</head>
+
+<body>
+  <label for="pilihGambar">Pilih Gambar:</label>
+  <select id="pilihGambar" onchange="tampilkanGambar()">
+    <option value="jaguar">Jaguar</option>
+    <option value="jalak">Jalak Bali</option>
+    <option value="jerapah">Jerapah</option>
+    <option value="kasuari">Kasuari</option>
+    <option value="komodo">Komodo</option>
+    <option value="badak">Badak</option>
+    <option value="cendrawasih">Cendrawasih</option>
+  </select>
+  <br />
+
+  <img src="jaguar.jpg" id="gambarTerpilih" alt="Gambar Terpilih" width="300" />
+
+  <script>
+    function tampilkanGambar() {
+      let nilaiTerpilih = document.getElementById("pilihGambar").value;
+      let gambarTerpilih = document.getElementById("gambarTerpilih");
+
+      switch (nilaiTerpilih) {
+        case "jaguar":
+          gambarTerpilih.src = "jaguar.jpg";
+          break;
+        case "jalak":
+          gambarTerpilih.src = "Jalak bali.jpg";
+          break;
+        case "jerapah":
+          gambarTerpilih.src = "Jerapah.jpeg";
+          break;
+        case "kasuari":
+          gambarTerpilih.src = "kasuari.jpg";
+          break;
+        case "komodo":
+          gambarTerpilih.src = "komodo.jpg";
+          break;
+        case "badak":
+          gambarTerpilih.src = "badak.jpeg";
+          break;
+        case "cendrawasih":
+          gambarTerpilih.src = "cendrawasih.jpg";
+          break;
+      }
+    }
+  </script>
+</body>
+
+</html>
